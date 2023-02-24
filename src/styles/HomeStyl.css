@@ -1,0 +1,31 @@
+.home {
+    /* border: 1px solid red; */
+    font-family: quicksand;
+    margin-top: 80px;
+    width: 70vw;
+    height: 80px;
+    /* display: flex; */
+
+}
+
+.home h1 {
+    color: black;
+}
+
+.blog-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: lpx solid #fafafa;
+    /* border: 2px solid red; */
+    
+}
+
+.blog-preview:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1)
+}
+
+.blog-preview h2 {
+    font-size: 20px;
+    color: #f17135;
+    margin-bottom: 8px;
+}
