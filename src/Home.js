@@ -2,12 +2,10 @@ import { useEffect, useState } from 'react'
 import BlogList from './BlogList';
 const Home = () => {
     let blogTitle = 'All Blogs!';
-    const [blogs, setblogs] = useState(null);      
+    const [blogs, setblogs] = useState(null);    
+    const [isPending, setIsPending] = useState(true);  
 
-        const handleDelete = (id ) => {
-            let newBlogs = blogs.filter(blog => blog.id !== id)
-            setblogs(newBlogs)
-        }
+        
        
         // Fetching blogs from Json database using useEffect()
         useEffect(() => {
@@ -17,6 +15,7 @@ const Home = () => {
                 })
                 .then(data => {
                     setblogs(data);
+                    setIsPending(false);
                 })   
         }, [])
 
@@ -24,7 +23,8 @@ const Home = () => {
     return (
 
         <div className="home">
-            {blogs && <BlogList blogs={ blogs } title={blogTitle} handleDelete={handleDelete}/> } 
+            { isPending && <div>Loading...</div> }
+            { blogs && <BlogList blogs={ blogs } title={blogTitle}/> } 
         </div>
 
     );
