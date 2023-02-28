@@ -8,8 +8,11 @@ const useFetch = (url) => {
 
     // Fetching blogs from Json database using useEffect()
     useEffect(() => {
-        fetch(url) // fetches the blog and returns a promise
+        
+        setTimeout(()=>{
 
+            fetch(url) // fetches the blog and returns a promise
+            
             // catching the promise to get the resources
             .then(res => {  
                 if(!res.ok){ // cheching if the resource is not available and throws an error 
@@ -17,20 +20,26 @@ const useFetch = (url) => {
                 }
                 return res.json(); // returns the resource and also a promise
             })
-
+            
             // catch the promise to get the data 
             .then(data => {
                 setdata(data);
                 setIsPending(false);
                 setError(null);
             })   
-
+            
             //catching all the errors
             .catch(err => {
-                setError(err.message);
-                setIsPending(false);
+                           
+                    
+                    setIsPending(false);
+                    setError(err.message);
+                
             })
-    }, [])
+        }, 1000)
+
+        
+    }, [url])
 
 
     return { data, isPending, error} // returning the states

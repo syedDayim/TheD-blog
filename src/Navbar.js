@@ -1,15 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
-    // const styles = {
-    //     color : 'white',
-    //     backgroundColor : '#D83B3B',
-    //     borderRadius : '10px',
-    // }
     return ( 
         <nav>
             <h1 className="nav-heading">TheD-blog</h1>
             <div className="nav-links">
-                <a href="/">Home</a>
-                <a href="/create">New Blog</a>
+                <Link to="/">Home</Link>
+                <Link to="/create">New Blog</Link>
             </div>
         </nav>
 

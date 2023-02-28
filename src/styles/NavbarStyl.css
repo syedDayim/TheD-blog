@@ -36,6 +36,15 @@ a{
     font-size: 20px;
     text-decoration: none;
 }
+
+a:hover{
+    padding: 14px;
+    font-family: 'Quicksand', sans-serif;
+    color : rgb(60, 72, 186);
+    font-size: 20px;
+    text-decoration: none;
+}
+
 /* a:hover{
     padding: 12px;
     font-family: 'Quicksand', sans-serif;
