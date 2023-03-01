@@ -3,6 +3,7 @@ import Home from "./Home";
 import Create from "./Create";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BlogPreview from "./BlogPreview";
+import NotFound from "./NotFound";
 function App() {
   return (
     <Router>
@@ -21,6 +22,10 @@ function App() {
 
             <Route path="/blogs/:id">
                 <BlogPreview />
+            </Route>
+
+            <Route path="*">
+                <NotFound />
             </Route>
           </Switch>
         </div>
