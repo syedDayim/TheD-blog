@@ -1,3 +1,6 @@
+html{
+    font-family: quicksand;
+}
 .home{
     /* border: 1px solid red; */
     font-family: quicksand;
@@ -34,4 +37,33 @@
     font-size: 20px;
     color: #f17135;
     margin-bottom: 8px;
+}
+
+
+.blog-details{
+   
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+    border-bottom: lpx solid #fafafa;
+    /* border: 2px solid red; */
+    
+}
+
+.blog-details:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1)
+}
+
+.blog-details h2 {
+    font-size: 30px;
+    color: #f17135;
+    margin-bottom: 8px;
+}
+.blog-details p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.blog-details div {
+    font-size: 20px;
+    font-weight: ;
 }
